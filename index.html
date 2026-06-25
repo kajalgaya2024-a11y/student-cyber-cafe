@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Student Cyber Cafe - गया में सभी डिजिटल और सरकारी सेवाएं एक जगह। PAN कार्ड, आधार, ऑनलाइन फॉर्म, टिकट बुकिंग।">
+    <meta name="keywords" content="cyber cafe, PAN card, Aadhaar, online services, Gaya, ticket booking, printing">
+    <meta name="author" content="Niraj Kumar - Student Cyber Cafe">
+    <meta property="og:title" content="Student Cyber Cafe | Premium Services in Gaya">
+    <meta property="og:description" content="गया में सभी डिजिटल सेवाएं एक जगह">
+    <meta property="og:type" content="business.business">
+    
+    <title>Student Cyber Cafe | गया में सर्वश्रेष्ठ डिजिटल सेवाएं</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%232563eb'>💻</text></svg>">
+    
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #7c3aed;
+            --tertiary: #06b6d4;
+            --success: #10b981;
+            --danger: #ef4444;
+            --light: #f8fafc;
+            --dark: #0f172a;
+            --gray: #64748b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Noto Sans Devanagari', Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--light);
+            color: #111827;
+            line-height: 1.6;
+        }
+
+        /* ========== HEADER ========== */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            background: #fff;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 24px;
+            transition: all 0.3s ease;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .topinfo {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .topinfo span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: var(--gray);
+            transition: color 0.3s;
+        }
+
+        .topinfo span:hover {
+            color: var(--primary);
+        }
+
+        .topinfo i {
+            color: var(--primary);
+            font-size: 16px;
+        }
+
+        /* ========== HERO SECTION ========== */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 140px 20px 200px;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--tertiary) 100%);
+            color: #fff;
+            animation: heroGradient 8s ease infinite;
+        }
+
+        @keyframes heroGradient {
+            0%, 100% { background: linear-gradient(135deg, var(--primary), var(--secondary), var(--tertiary)); }
+            50% { background: linear-gradient(135deg, var(--secondary), var(--tertiary), var(--primary)); }
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 900;
+            letter-spacing: -1px;
+            animation: slideInDown 0.8s ease;
+        }
+
+        .hero p {
+            font-size: 22px;
+            margin-top: 15px;
+            opacity: 0.95;
+            animation: slideInUp 0.8s ease 0.2s both;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+            flex-wrap: wrap;
+            animation: slideInUp 0.8s ease 0.4s both;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn-primary {
+            background: #fff;
+            color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+        }
+
+        .btn-secondary:hover {
+            background: #fff;
+            color: var(--primary);
+        }
+
+        /* Wave Animation */
+        .wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 200%;
+            height: 120px;
+            background: radial-gradient(circle at 50% 0, #fff 30%, transparent 31%);
+            background-size: 120px 120px;
+            animation: wave 12s linear infinite;
+        }
+
+        @keyframes wave {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ========== SECTIONS ========== */
+        .section {
+            max-width: 1200px;
+            margin: auto;
+            padding: 80px 20px;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 42px;
+            margin-bottom: 15px;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--gray);
+            font-size: 16px;
+            margin-bottom: 50px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ========== SERVICES GRID ========== */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 28px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 30px 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--tertiary));
+            transition: left 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+            border-color: var(--primary);
+        }
+
+        .card:hover::before {
+            left: 0;
+        }
+
+        .card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: #111827;
+        }
+
+        .icon {
+            font-size: 44px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+        }
+
+        details {
+            margin-top: 15px;
+        }
+
+        summary {
+            cursor: pointer;
+            color: var(--primary);
+            font-weight: 600;
+            padding: 8px;
+            border-radius: 6px;
+            transition: all 0.3s;
+            user-select: none;
+        }
+
+        summary:hover {
+            background: var(--light);
+        }
+
+        details p {
+            margin-top: 10px;
+            padding: 10px;
+            background: var(--light);
+            border-left: 3px solid var(--primary);
+            border-radius: 6px;
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        /* ========== STATS SECTION ========== */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+        }
+
+        .stat {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #fff;
+            padding: 35px 25px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(37, 99, 235, 0.2);
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+            animation: moveBackground 20s linear infinite;
+        }
+
+        .stat:hover {
+            transform: translateY(-8px);
+        }
+
+        .stat h3 {
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 8px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .stat p {
+            font-size: 16px;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+        }
+
+        @keyframes moveBackground {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(20px, 20px); }
+        }
+
+        /* ========== REVIEWS SECTION ========== */
+        .review {
+            background: #fff;
+            border-left: 5px solid var(--primary);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .review:hover {
+            transform: translateX(8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .review-name {
+            font-weight: 700;
+            color: #111827;
+        }
+
+        .review-rating {
+            color: #f59e0b;
+            font-size: 14px;
+        }
+
+        .review-text {
+            color: var(--gray);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        /* ========== FAQ SECTION ========== */
+        .faq details {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 12px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+
+        .faq details:hover {
+            border-left-color: var(--primary);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq summary {
+            margin: -20px;
+            padding: 20px;
+        }
+
+        .faq details p {
+            margin-top: 15px;
+            border: none;
+            background: none;
+            padding: 0;
+            color: var(--gray);
+        }
+
+        /* ========== CONTACT FORM ========== */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #111827;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 14px;
+            transition: all 0.3s;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #fff;
+            border: none;
+            padding: 14px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+        }
+
+        /* ========== MAP SECTION ========== */
+        .map {
+            background: #f0f9ff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .map iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: 20px;
+        }
+
+        .location-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+            padding: 0 20px;
+        }
+
+        .location-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .location-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .location-card i {
+            font-size: 28px;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .location-card h4 {
+            font-size: 14px;
+            color: var(--gray);
+            margin-bottom: 8px;
+        }
+
+        .location-card p {
+            font-weight: 700;
+            color: #111827;
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            background: var(--dark);
+            color: #fff;
+            padding: 50px 20px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #334155;
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+        }
+
+        /* ========== WHATSAPP BUTTON ========== */
+        .whatsapp {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            text-decoration: none;
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+            animation: float 3s ease-in-out infinite;
+            z-index: 998;
+            transition: all 0.3s;
+        }
+
+        .whatsapp:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.4);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 12px;
+                padding: 12px;
+            }
+
+            .topinfo {
+                flex-direction: column;
+                gap: 8px;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .topinfo span {
+                font-size: 12px;
+            }
+
+            .hero {
+                padding: 80px 20px 120px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .title {
+                font-size: 32px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stat {
+                padding: 25px 15px;
+            }
+
+            .stat h3 {
+                font-size: 36px;
+            }
+
+            .contact-form {
+                padding: 25px 20px;
+            }
+
+            .map iframe {
+                height: 300px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .title {
+                font-size: 26px;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                padding: 20px 16px;
+            }
+
+            .section {
+                padding: 50px 16px;
+            }
+
+            .topinfo {
+                gap: 6px;
+                font-size: 11px;
+            }
+
+            .logo {
+                font-size: 20px;
+            }
+        }
+
+        /* ========== ANIMATIONS ========== */
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Badge */
+        .badge {
+            display: inline-block;
+            background: var(--success);
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- ========== HEADER ========== -->
+    <header>
+        <div class="logo">
+            <i class="fas fa-laptop"></i> Student Cyber Cafe
+        </div>
+        <div class="topinfo">
+            <span><i class="fa-solid fa-location-dot"></i> गया, बिहार</span>
+            <span><i class="fa-solid fa-phone"></i> <a href="tel:+916203600904" style="color: inherit; text-decoration: none;">+91 62036 00904</a></span>
+            <span><i class="fa-solid fa-clock"></i> 24x7 उपलब्ध</span>
+        </div>
+    </header>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero">
+        <h1>Student Cyber Cafe</h1>
+        <p>सभी डिजिटल और सरकारी सेवाएं एक जगह पर 🎯</p>
+        <div class="hero-buttons">
+            <a class="btn btn-primary" href="https://wa.me/916203600904" target="_blank">
+                <i class="fab fa-whatsapp"></i> WhatsApp करें
+            </a>
+            <a class="btn btn-secondary" href="#contact">
+                <i class="fas fa-envelope"></i> संपर्क करें
+            </a>
+        </div>
+        <div class="wave"></div>
+    </section>
+
+    <!-- ========== SERVICES SECTION ========== -->
+    <section class="section">
+        <h2 class="title">🎯 हमारी सेवाएं</h2>
+        <p class="subtitle">सभी जरूरी डिजिटल और सरकारी सेवाएं आपके लिए उपलब्ध हैं</p>
+        <div class="grid">
+            <div class="card fade-in">
+                <div class="icon"><i class="fa-solid fa-id-card"></i></div>
+                <h3>PAN कार्ड</h3>
+                <details>
+                    <summary>🔍 सेवाएं देखें</summary>
+                    <p>✓ नया PAN कार्ड<br>✓ सुधार आवेदन<br>✓ e-PAN<br>✓ आधार लिंकिंग</p>
+                </details>
+                <span class="badge">तेज़ डिलीवरी</span>
+            </div>
+
+            <div class="card fade-in">
+                <div class="icon"><i class="fa-solid fa-fingerprint"></i></div>
+                <h3>आधार सेवाएं</h3>
+                <details>
+                    <summary>🔍 सेवाएं देखें</summary>
+                    <p>✓ नाम अपडेट<br>✓ जन्मतिथि संशोधन<br>✓ पता अपडेट<br>✓ मोबाइल नंबर अपडेट</p>
+                </details>
+                <span class="badge">सर्टिफाइड</span>
+            </div>
+
+            <div class="card fade-in">
+                <div class="icon"><i class="fa-solid fa-file-pdf"></i></div>
+                <h3>ऑनलाइन फॉर्म</h3>
+                <details>
+                    <summary>🔍 सेवाएं देखें</summary>
+                    <p>✓ छात्रवृत्ति फॉर्म<br>✓ नौकरी फॉर्म<br>✓ प्रवेश फॉर्म<br>✓ परीक्षा पंजीकरण</p>
+                </details>
+                <span class="badge">सहायता उपलब्ध</span>
+            </div>
+
+            <div class="card fade-in">
+                <div class="icon"><i class="fa-solid fa-train"></i></div>
+                <h3>टिकट बुकिंग</h3>
+                <details>
+                    <summary>🔍 सेवाएं देखें</summary>
+                    <p>✓ रेल टिकट<br>✓ बस टिकट<br>✓ हवाई टिकट<br>✓ सर्वोत्तम कीमत गारंटी</p>
+                </details>
+                <span class="badge">तुरंत कन्फर्मेशन</span>
+            </div>
+
+            <div class="card fade-in">
+                <div class="icon"><i class="fa-solid fa-print"></i></div>
+                <h3>प्रिंटिंग सेवाएं</h3>
+                <details>
+                    <summary>🔍 सेवाएं देखें</summary>
+                    <p>✓ प्रिंटिंग<br>✓ स्कैनिंग<br>✓ लैमिनेशन<br>✓ फोटोकॉपी</p>
+                </details>
+                <span class="badge">अर्थव्यवस्थी कीमत</span>
+            </div>
+
+            <div class="card fade-in">
+                <div class="icon"><i class="fa-solid fa-certificate"></i></div>
+                <h3>प्रमाणपत्र</h3>
+                <details>
+                    <summary>🔍 सेवाएं देखें</summary>
+                    <p>✓ आय प्रमाणपत्र<br>✓ जाति प्रमाणपत्र<br>✓ निवास प्रमाणपत्र<br>✓ अन्य प्रमाणपत्र</p>
+                </details>
+                <span class="badge">सरकारी अनुमोदित</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== STATS SECTION ========== -->
+    <section class="section" style="background: #f0f9ff; border-radius: 20px; margin: 60px 20px;">
+        <h2 class="title">📊 हमारी सफलता</h2>
+        <p class="subtitle">हजारों संतुष्ट ग्राहकों का विश्वास हमें आगे बढ़ाता है</p>
+        <div class="stats">
+            <div class="stat">
+                <h3>5000+</h3>
+                <p>खुश ग्राहक</p>
+            </div>
+            <div class="stat">
+                <h3>50+</h3>
+                <p>सेवाएं</p>
+            </div>
+            <div class="stat">
+                <h3>8+</h3>
+                <p>वर्षों का अनुभव</p>
+            </div>
+            <div class="stat">
+                <h3>24x7</h3>
+                <p>ग्राहक सहायता</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== WHY CHOOSE US ========== -->
+    <section class="section">
+        <h2 class="title">💡 हमें क्यों चुनें?</h2>
+        <p class="subtitle">गुणवत्ता और विश्वस्त सेवा के लिए हमारा चयन करें</p>
+        <div class="grid">
+            <div class="card">
+                <div class="icon"><i class="fas fa-bolt"></i></div>
+                <h3>तेज़ सेवा</h3>
+                <p>सभी कार्य न्यूनतम समय में पूरे हों</p>
+            </div>
+            <div class="card">
+                <div class="icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>सुरक्षित और विश्वस्त</h3>
+                <p>आपकी जानकारी पूरी तरह सुरक्षित है</p>
+            </div>
+            <div class="card">
+                <div class="icon"><i class="fas fa-users"></i></div>
+                <h3>अनुभवी टीम</h3>
+                <p>प्रशिक्षित और मित्रवत कर्मचारी</p>
+            </div>
+            <div class="card">
+                <div class="icon"><i class="fas fa-rupee-sign"></i></div>
+                <h3>सर्वोत्तम कीमत</h3>
+                <p>बाजार में सबसे अच्छी दरें</p>
+            </div>
+            <div class="card">
+                <div class="icon"><i class="fas fa-headset"></i></div>
+                <h3>24/7 सहायता</h3>
+                <p>किसी भी समय सहायता उपलब्ध</p>
+            </div>
+            <div class="card">
+                <div class="icon"><i class="fas fa-check-circle"></i></div>
+                <h3>सरकारी अनुमोदित</h3>
+                <p>सभी सेवाएं अधिकृत और प्रमाणित</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CUSTOMER REVIEWS ========== -->
+    <section class="section" style="background: #f8fafc; border-radius: 20px; margin: 60px 20px;">
+        <h2 class="title">⭐ ग्राहक समीक्षाएं</h2>
+        <p class="subtitle">हमारे ग्राहक हमारी सेवा से कितने संतुष्ट हैं</p>
+        <div class="grid">
+            <div class="review">
+                <div class="review-header">
+                    <span class="review-name">राज कुमार</span>
+                    <span class="review-rating">⭐⭐⭐⭐⭐</span>
+                </div>
+                <p class="review-text">"शानदार PAN कार्ड सेवा। बहुत तेज़ और विश्वस्त। मैं सभी को सुझाता हूं।"</p>
+            </div>
+
+            <div class="review">
+                <div class="review-header">
+                    <span class="review-name">प्रिया शर्मा</span>
+                    <span class="review-rating">⭐⭐⭐⭐⭐</span>
+                </div>
+                <p class="review-text">"इलाके में सर्वश्रेष्ठ साइबर कैफे। स्टाफ बहुत मदद करने वाला और मित्रवत है।"</p>
+            </div>
+
+            <div class="review">
+                <div class="review-header">
+                    <span class="review-name">अंकित विश्वास</span>
+                    <span class="review-rating">⭐⭐⭐⭐⭐</span>
+                </div>
+                <p class="review-text">"ऑनलाइन फॉर्म भरने में बहुत मदद मिली। सभी दस्तावेज़ सही तरीके से तैयार किए।"</p>
+            </div>
+
+            <div class="review">
+                <div class="review-header">
+                    <span class="review-name">मीना देवी</span>
+                    <span class="review-rating">⭐⭐⭐⭐⭐</span>
+                </div>
+                <p class="review-text">"आधार अपडेट करवाना बहुत आसान था। कोई परेशानी नहीं, बस सेवा।"</p>
+            </div>
+
+            <div class="review">
+                <div class="review-header">
+                    <span class="review-name">विजय कुमार</span>
+                    <span class="review-rating">⭐⭐⭐⭐⭐</span>
+                </div>
+                <p class="review-text">"टिकट बुकिंग में सर्वोत्तम ��रें मिलीं। बुकिंग तुरंत हो गई।"</p>
+            </div>
+
+            <div class="review">
+                <div class="review-header">
+                    <span class="review-name">संजना गुप्ता</span>
+                    <span class="review-rating">⭐⭐⭐⭐⭐</span>
+                </div>
+                <p class="review-text">"प्रमाणपत्र सेवा में कोई परेशानी नहीं। सब कुछ समय पर मिल गया।"</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT FORM ========== -->
+    <section class="section" id="contact">
+        <h2 class="title">📬 हमसे संपर्क करें</h2>
+        <p class="subtitle">कोई सवाल? हमें भेजें और हम जल्द जवाब देंगे</p>
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+                <label for="name">आपका नाम *</label>
+                <input type="text" id="name" name="name" required placeholder="नाम दर्ज करें">
+            </div>
+            <div class="form-group">
+                <label for="phone">फोन नंबर *</label>
+                <input type="tel" id="phone" name="phone" required placeholder="10 अंकों का नंबर">
+            </div>
+            <div class="form-group">
+                <label for="email">ईमेल (वैकल्पिक)</label>
+                <input type="email" id="email" name="email" placeholder="ईमेल पता">
+            </div>
+            <div class="form-group">
+                <label for="service">सेवा चुनें *</label>
+                <input type="text" id="service" name="service" required placeholder="किस सेवा की जरूरत है?">
+            </div>
+            <div class="form-group">
+                <label for="message">संदेश *</label>
+                <textarea id="message" name="message" required placeholder="अपना संदेश लिखें..."></textarea>
+            </div>
+            <button type="submit" class="btn-submit">📧 संदेश भेजें</button>
+        </form>
+    </section>
+
+    <!-- ========== FAQ SECTION ========== -->
+    <section class="section faq">
+        <h2 class="title">❓ अक्सर पूछे जाने वाले सवाल</h2>
+        <p class="subtitle">आपके सामान्य प्रश्नों के उत्तर</p>
+        
+        <details>
+            <summary><i class="fas fa-chevron-right"></i> PAN कार्ड कितने दिन में मिलता है?</summary>
+            <p>आमतौर पर 7-15 दिन में PAN कार्ड आ जाता है। हम तुरंत आवेदन भेज देते हैं।</p>
+        </details>
+
+        <details>
+            <summary><i class="fas fa-chevron-right"></i> आधार में नाम बदलवाना संभव है?</summary>
+            <p>हाँ, आधार में नाम, पता, जन्मतिथि आदि सब बदल सकते हैं। हम आपको पूरी सहायता देंगे।</p>
+        </details>
+
+        <details>
+            <summary><i class="fas fa-chevron-right"></i> रेल टिकट बुकिंग में कितना समय लगता है?</summary>
+            <p>आमतौर पर 5-10 मिनट में रेल टिकट बुक हो जाता है। तुरंत कन्फर्मेशन मिल जाती है।</p>
+        </details>
+
+        <details>
+            <summary><i class="fas fa-chevron-right"></i> प्रमाणपत्र के लिए क्या दस्तावेज़ चाहिए?</summary>
+            <p>विभिन्न प्रमाणपत्रों के लिए अलग दस्तावेज़ चाहिए। आप सीधे आकर पूछ सकते हैं या WhatsApp करें।</p>
+        </details>
+
+        <details>
+            <summary><i class="fas fa-chevron-right"></i> क्या ऑनलाइन फॉर्म भरने में सहायता मिलेगी?</summary>
+            <p>हाँ, हम हर कदम पर आपकी सहायता करेंगे। सभी फॉर्म सही तरीके से भरेंगे।</p>
+        </details>
+
+        <details>
+            <summary><i class="fas fa-chevron-right"></i> क्या रविवार को भी सेवा उपलब्ध है?</summary>
+            <p>हाँ, हम 24x7 खुले हैं। रविवार और छुट्टियों को भी सेवा देते हैं।</p>
+        </details>
+    </section>
+
+    <!-- ========== LOCATION SECTION ========== -->
+    <section class="section">
+        <h2 class="title">📍 हमारा स्थान</h2>
+        <p class="subtitle">गया में हमें आसानी से खोजें</p>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3628.1723645721676!2d84.99160701534457!3d25.186141877650557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f43b6b8c8c8c8d%3A0x8c8c8c8c8c8c8c8c!2sGaya%2C%20Bihar!5e0!3m2!1sen!2sin!4v1234567890" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="location-info">
+            <div class="location-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h4>पता</h4>
+                <p>गया, बिहार</p>
+            </div>
+            <div class="location-card">
+                <i class="fas fa-phone-alt"></i>
+                <h4>फोन</h4>
+                <p><a href="tel:+916203600904" style="color: inherit; text-decoration: none;">+91 62036 00904</a></p>
+            </div>
+            <div class="location-card">
+                <i class="fas fa-clock"></i>
+                <h4>समय</h4>
+                <p>24x7 खुला</p>
+            </div>
+            <div class="location-card">
+                <i class="fas fa-envelope"></i>
+                <h4>ईमेल</h4>
+                <p>info@studentcybercafe.com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>💼 Student Cyber Cafe</h4>
+                <p style="color: #cbd5e1; margin-bottom: 15px;">सभी डिजिटल और सरकारी सेवाएं एक जगह पर उपलब्ध हैं।</p>
+                <p><strong>मालिक:</strong> निराज कुमार</p>
+                <p><strong>शहर:</strong> गया, बिहार</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>🎯 सेवाएं</h4>
+                <ul>
+                    <li><a href="#services">PAN कार्ड</a></li>
+                    <li><a href="#services">आधार सेवाएं</a></li>
+                    <li><a href="#services">ऑनलाइन फॉर्म</a></li>
+                    <li><a href="#services">टिकट बुकिंग</a></li>
+                    <li><a href="#services">प्रिंटिंग</a></li>
+                    <li><a href="#services">प्रमाणपत्र</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>📞 संपर्क करें</h4>
+                <ul>
+                    <li><i class="fas fa-phone"></i> <a href="tel:+916203600904">+91 62036 00904</a></li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:info@studentcybercafe.com">info@studentcybercafe.com</a></li>
+                    <li><i class="fas fa-map-marker"></i> गया, बिहार</li>
+                    <li><i class="fas fa-clock"></i> 24x7 खुला</li>
+                </ul>
+                <div class="social-links">
+                    <a href="https://wa.me/916203600904" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>⚙️ अन्य</h4>
+                <ul>
+                    <li><a href="#contact">हमसे संपर्क करें</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#">गोपनीयता नीति</a></li>
+                    <li><a href="#">शर्तें और शर्तें</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Student Cyber Cafe | सर्वाधिकार सुरक्षित | निराज कुमार द्वारा निर्मित</p>
+            <p style="margin-top: 10px; font-size: 12px;">Made with ❤️ in Gaya, Bihar</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a class="whatsapp" href="https://wa.me/916203600904" target="_blank" title="WhatsApp पर संपर्क करें">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ========== SCRIPTS ========== -->
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Form submission
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value;
+
+            // WhatsApp message
+            const whatsappMessage = `नमस्ते! मेरा नाम ${name} है।\n\nफोन: ${phone}\nईमेल: ${email}\n\nसेवा: ${service}\n\nसंदेश: ${message}`;
+            
+            const whatsappUrl = `https://wa.me/916203600904?text=${encodeURIComponent(whatsappMessage)}`;
+            
+            window.open(whatsappUrl, '_blank');
+            
+            // Reset form
+            event.target.reset();
+        }
+
+        // Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card, .review, .stat').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Details/Summary animation
+        document.querySelectorAll('details').forEach(detail => {
+            detail.addEventListener('toggle', function() {
+                if (this.open) {
+                    this.style.animation = 'slideInUp 0.3s ease';
+                }
+            });
+        });
+
+        // Mobile menu responsiveness
+        window.addEventListener('resize', () => {
+            const header = document.querySelector('header');
+            if (window.innerWidth < 768) {
+                header.style.padding = '10px 12px';
+            } else {
+                header.style.padding = '14px 24px';
+            }
+        });
+    </script>
+</body>
+</html>
